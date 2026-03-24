@@ -4,7 +4,7 @@ This is a prediction model that uses economic indicators, national polling avera
 
 Here is a scenario where I asked the model to predict the 2024 election based on the above information, and the model predicts a Republican win with 312 EVs over 223 votes for the Democrats. The actual result in 2024 was 312 R - 226 D which is a 3 EV gap, which can be explained by the fact that the model doesn't consider Maine and Nebraska's electoral system, which distribute their electoral votes by congressional districts.
 
-All seven major swing states were called correctly. The predicted percentages are within 3 points of the actual results. Nevada, especially, came within 0.1% of the actual result.
+All seven major swing states were called correctly for 2024. The predicted percentages are within 3 points of the actual results. Nevada, especially, came within 0.1% of the actual result.
 
 ![2024 Prediction Map](2024_prediction_map.png)
 
@@ -75,7 +75,7 @@ Values are mean absolute error in percentage points per state. The high error in
 
 This is a fundamentals-based model. It uses national-level economic data, approval ratings, and polling to make predictions. Professional forecasting operations like FiveThirtyEight and The Economist start from the same foundation but add several things on top.
 
-The biggest difference is state-level polling. FiveThirtyEight ingested hundreds of individual state polls weighted by pollster track record, recency, and sample size. The Economist used a Bayesian setup where the model started the cycle relying on fundamentals and gradually shifted weight toward polls as election day approached. I only use a single national polling number.
+The biggest difference is state-level polling. FiveThirtyEight ingested hundreds of individual state polls weighted by pollster track record, recency, and sample size. The Economist used a Bayesian setup where the model started the cycle relying on fundamentals and gradually shifted weight toward polls as election day approached. I only use a single national polling number. This does end up with scenarios where it attributes 538 EVs to Clinton in 1992 or predicts a Republican victory in 2020, which shows that while it is within the margin of error for predictions, the lack of state level polling makes EC prediction harder.
 
 Both professional models also incorporated demographic data. They tracked how specific voter groups (college-educated voters, Hispanic voters, etc.) were shifting nationally and then projected those shifts onto each state based on its demographic composition.
 
